@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#authContainer, #serviceForm, #servicesList {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Стилизация контейнера кнопок */
+#buttonContainer {
+    text-align: center; /* Выравнивание содержимого контейнера по центру */
+    margin-top: 50px; /* Отступ сверху для отделения от других элементов */
+}
+
+/* Общие стили для кнопок */
+button {
+    width: 200px; /* Ширина кнопок */
+    padding: 10px 20px; /* Паддинги для увеличения размера и удобства */
+    margin: 10px 0; /* Вертикальные отступы между кнопками */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+#listOfServices li {
+    background-color: #f9f9f9;  /* Светлый фон для каждой услуги */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Тень, создающая эффект "всплывающего" элемента */
+    padding: 15px;               /* Отступ внутри каждой услуги */
+    margin-bottom: 10px;         /* Отступ между услугами */
+    border-radius: 5px;          /* Скругление углов */
+}
+#listOfServices li:hover {
+    background-color: #e9ecef;  /* Смена фона при наведении */
+    cursor: pointer;            /* Изменение курсора, указывающее на возможность взаимодействия */
+}
+
+#searchInput {
+    width: 100%; /* Занимает всю ширину контейнера */
+    padding: 10px; /* Добавляет внутренние отступы для удобства ввода */
+    margin-bottom: 20px; /* Отступ снизу для разделения от списка услуг */
+    border: 1px solid #ccc; /* Граница вокруг поля */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+

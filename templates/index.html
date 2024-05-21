@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форум различных услуг</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="authContainer">
+        <div id="buttonContainer">
+            <button id="showLoginForm">Войти</button>
+            <button id="showRegisterForm">Регистрация</button>
+        </div>
+        <form id="loginForm">
+            <h2>Вход</h2>
+            <input type="email" id="loginEmail" placeholder="Электронная почта" required>
+            <input type="password" id="loginPassword" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+            <button type="button" class="backButton">Назад</button>
+        </form>
+        <form id="registerForm">
+            <h2>Регистрация</h2>
+            <input type="text" id="registerUsername" placeholder="Имя пользователя" required>
+            <input type="email" id="registerEmail" placeholder="Электронная почта" required>
+            <input type="password" id="registerPassword" placeholder="Пароль" required>
+            <input type="password" id="registerConfirmPassword" placeholder="Подтверждения пароля" required>
+            <button type="submit">Зарегистрироваться</button>
+            <button type="button" class="backButton">Назад</button>
+        </form>
+    </div>
+        <!-- Кнопка "Выйти", видимая только для аутентифицированных пользователей -->
+    <button id="logoutButton">Выйти из аккаунта</button>
+    <form id="serviceForm" style="display:none;">
+        <h2>Добавить услугу</h2>
+        <input type="text" id="serviceName" placeholder="Название услуги" required>
+        <textarea id="serviceDescription" placeholder="Описание услуги" required></textarea>
+        <input type="text" id="servicePhone" placeholder="Номер телефона" required>
+        <input type="number" id="servicePrice" placeholder="Цена" required>
+        <button type="submit">Добавить услугу</button>
+    </form>
+    <div id="servicesSection" style="display:none;">
+        <input type="text" id="searchInput" placeholder="Поиск по услугам..." />
+        <ul id="listOfServices">
+            <!-- Список услуг будет здесь -->
+        </ul>
+    </div>
+    
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
